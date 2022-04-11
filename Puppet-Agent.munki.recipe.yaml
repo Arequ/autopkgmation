@@ -1,0 +1,28 @@
+Identifier: local.munki.Puppet-Agent
+Input:
+  ARCH: x86_64
+  MUNKI_REPO_SUBDIR: apps/%NAME%
+  NAME: Puppet-Agent
+  OS_VERSION: '11'
+  PUPPET_MAJ_VERSION: '7'
+  PUPPET_MIN_VERSION: 15.0-1
+  pkginfo:
+    catalogs:
+    - testing
+    description: Puppet-Agent for macOS.
+    developer: Puppet
+    display_name: Puppet-Agent
+    name: '%NAME%'
+    unattended_install: true
+ParentRecipe: com.github.arequ.munki.Puppet-Agent
+ParentRecipeTrustInfo:
+  non_core_processors: {}
+  parent_recipes:
+    com.github.arequ.download.Puppet-Agent:
+      git_hash: 2a904c66b321f63d865fbc860712d5d75ea217fd
+      path: ~/Library/AutoPkg/RecipeRepos/com.github.arequ.autopkg_recipes/Puppet-Agent/Puppet-Agent.download.recipe.yaml
+      sha256_hash: 900100c3efc854293092561ad09a8b8c824799de33bee5000896d414651b560c
+    com.github.arequ.munki.Puppet-Agent:
+      git_hash: 0035b14cb3d81b83d59a6f3fc8dcfa6dc155258d
+      path: ~/Library/AutoPkg/RecipeRepos/com.github.arequ.autopkg_recipes/Puppet-Agent/Puppet-Agent.munki.recipe.yaml
+      sha256_hash: 1cdec51561b942e58a6b72c17fcaa38651a7ab297e96d2f64ba1e933eb40851a

@@ -1,0 +1,25 @@
+Identifier: local.munki.iTerm2
+Input:
+  APP_FILENAME: iTerm
+  MUNKI_REPO_SUBDIR: apps/%NAME%
+  NAME: iTerm2
+  pkginfo:
+    catalogs:
+    - testing
+    description: ' '
+    developer: GEORGE NACHMAN
+    display_name: iTerm2
+    name: '%NAME%'
+    unattended_install: true
+ParentRecipe: com.github.arequ.munki.iTerm2
+ParentRecipeTrustInfo:
+  non_core_processors: {}
+  parent_recipes:
+    com.github.arequ.download.iTerm2:
+      git_hash: 56dbac083450a6981e6c3ff0c38e8a7778f5ced6
+      path: ~/Library/AutoPkg/RecipeRepos/com.github.arequ.autopkg_recipes/iTerm2/iTerm2.download.recipe.yaml
+      sha256_hash: c78d005bb3e1b703a0327cc7c0ee7d534c44081611b8f00005fd6fe1bfe048d3
+    com.github.arequ.munki.iTerm2:
+      git_hash: e1422ef602c4cc151609f57f305b03f55e1704a6
+      path: ~/Library/AutoPkg/RecipeRepos/com.github.arequ.autopkg_recipes/iTerm2/iTerm2.munki.recipe.yaml
+      sha256_hash: 6bb3fa474625a8831378504d68cf92fad6a52241816c1294c6c0e1c4936d402b

@@ -1,0 +1,28 @@
+Identifier: local.munki.osquery
+Input:
+  MUNKI_REPO_SUBDIR: utilities/osquery
+  NAME: osquery
+  pkginfo:
+    catalogs:
+    - testing
+    category: Utilities
+    description: osquery allows you to easily ask questions about your Linux and OSX
+      infrastructure. Whether your goal is intrusion detection, infrastructure reliability,
+      or compliance, osquery gives you the ability to empower and inform a broad set
+      of organizations within your company.
+    developer: Facebook
+    name: '%NAME%'
+    unattended_install: true
+  version: latest
+ParentRecipe: com.github.jbaker10.munki.osquery
+ParentRecipeTrustInfo:
+  non_core_processors: {}
+  parent_recipes:
+    com.github.jbaker10.download.osquery:
+      git_hash: 893c0c1380adff1676556532da5d2d579df3744f
+      path: ~/Library/AutoPkg/RecipeRepos/com.github.autopkg.jbaker10-recipes/osquery/osquery.download.recipe
+      sha256_hash: a8342a77d21a031ef2ccc706a8bf60a73eb947bb98dde4742174a5a595cdd3c2
+    com.github.jbaker10.munki.osquery:
+      git_hash: 7f29456f6384113c47a2f59bcddcc9c6fe1ab55d
+      path: ~/Library/AutoPkg/RecipeRepos/com.github.autopkg.jbaker10-recipes/osquery/osquery.munki.recipe
+      sha256_hash: 3e932bb11dc33e2c30c0bbdad04e5a3edf3c52ac4c78126651a0f0eadb6b101e

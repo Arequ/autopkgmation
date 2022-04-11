@@ -1,0 +1,25 @@
+Identifier: local.munki.Rectangle
+Input:
+  MUNKI_REPO_SUBDIR: apps/%NAME%
+  NAME: Rectangle
+  pkginfo:
+    catalogs:
+    - testing
+    description: Move and resize windows on macOS with keyboard shortcuts and snap
+      areas
+    developer: Ryan Hanson
+    display_name: Rectangle
+    name: '%NAME%'
+    unattended_install: true
+ParentRecipe: com.github.arequ.munki.Rectangle
+ParentRecipeTrustInfo:
+  non_core_processors: {}
+  parent_recipes:
+    com.github.arequ.download.Rectangle:
+      git_hash: 56dbac083450a6981e6c3ff0c38e8a7778f5ced6
+      path: ~/Library/AutoPkg/RecipeRepos/com.github.arequ.autopkg_recipes/Rectangle/Rectangle.download.recipe.yaml
+      sha256_hash: 2455775edccc61270c773999ff07d40b061a58796ec57286017e019915a49b79
+    com.github.arequ.munki.Rectangle:
+      git_hash: 0b9c8a4604f23403187d4245b7098573c4085aa4
+      path: ~/Library/AutoPkg/RecipeRepos/com.github.arequ.autopkg_recipes/Rectangle/Rectangle.munki.recipe.yaml
+      sha256_hash: 89a8c492b6e44bdf96a0da7687bc8177e66da071c31fbeb43dd4a606f1d52eb2

@@ -1,0 +1,25 @@
+Identifier: local.munki.sensiblesidebuttons
+Input:
+  MUNKI_REPO_SUBDIR: apps/%NAME%
+  NAME: SensibleSideButtons
+  pkginfo:
+    catalogs:
+    - testing
+    description: A macOS menu bar app that enables system-wide navigation functionality
+      for the side buttons on third-party mice.
+    developer: Alexei Baboulevitch
+    display_name: SensibleSideButtons
+    name: '%NAME%'
+    unattended_install: true
+ParentRecipe: com.github.arequ.munki.SensibleSideButtons
+ParentRecipeTrustInfo:
+  non_core_processors: {}
+  parent_recipes:
+    com.github.arequ.download.SensibleSideButtons:
+      git_hash: 56dbac083450a6981e6c3ff0c38e8a7778f5ced6
+      path: ~/Library/AutoPkg/RecipeRepos/com.github.arequ.autopkg_recipes/SensibleSideButtons/Sensiblesidebuttons.download.recipe.yaml
+      sha256_hash: fd4c73b87b6a1e731882d3b772042c7259b5b485c2a6f5e0f229950c5843c0d5
+    com.github.arequ.munki.SensibleSideButtons:
+      git_hash: 0b9c8a4604f23403187d4245b7098573c4085aa4
+      path: ~/Library/AutoPkg/RecipeRepos/com.github.arequ.autopkg_recipes/SensibleSideButtons/Sensiblesidebuttons.munki.recipe.yaml
+      sha256_hash: 559c2cf46bfea6702c40e8e1e411e25bd76093119a67f75cd50c98312ce9c841
